@@ -10,6 +10,7 @@ public interface IUser {
     User adduser (User user);
     User getUser (long idUser);
     void removeUser (long iduser);
+    V
 
 
 
