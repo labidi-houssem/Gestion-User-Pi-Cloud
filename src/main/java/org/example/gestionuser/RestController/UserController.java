@@ -12,6 +12,7 @@ import java.util.List;
 @RequestMapping("/api/user")
 public class UserController {
     private final IUser iu;
+
     @GetMapping("/getAll")
     public List<User> getAllUser() {
         return iu.getAllUsers();
@@ -23,19 +24,17 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    public User addUser(@RequestBody User user){
+    public User addUser(@RequestBody User user) {
         return iu.adduser(user);
     }
 
     @PutMapping("/updateaUser")
-    public User update(@RequestBody User user){
+    public User update(@RequestBody User user) {
         return iu.updateUser(user);
     }
 
     @DeleteMapping("/del/{id}")
-    public void del(@PathVariable long id){
+    public void del(@PathVariable long id) {
         iu.removeUser(id);
     }
-
-
 }

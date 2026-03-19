@@ -26,7 +26,7 @@ public class UserServiceImp implements IUser{
 
     @Override
     public User getUser (long iduser) {
-        return ur.findById(iduser).get();
+        return ur.findById(iduser).orElse(null);
     }
     @Override
     public void removeUser(long iduser) {
@@ -34,4 +34,8 @@ public class UserServiceImp implements IUser{
 
     }
 
+    @Override
+    public User findByEmail(String email) {
+        return ur.findByEmail(email).orElse(null);
+    }
 }
