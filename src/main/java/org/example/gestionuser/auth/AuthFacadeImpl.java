@@ -86,7 +86,7 @@ public class AuthFacadeImpl implements AuthFacade {
         if (request.getPresentationCarriere() != null) user.setPresentationCarriere(request.getPresentationCarriere());
         if (request.getTelephoneCabinet() != null) user.setTelephoneCabinet(request.getTelephoneCabinet());
 
-        if (request.getNomOrganisation() != null) user.setNomOrganisation(request.getNomOrganisation());
+        if (request.getNomOrganisation() != null) user.setNom_organisation(request.getNomOrganisation());
         if (request.getDescription() != null) user.setDescription(request.getDescription());
 
         User updated = userService.updateUser(user);

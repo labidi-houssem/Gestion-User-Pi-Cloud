@@ -42,7 +42,7 @@ public class User {
     private String typeVehicule;
     private Double capaciteKg;
     private String numeroPlaque;
-    private String Region;
+
     
     // =============================
     //  Agent
@@ -59,11 +59,11 @@ public class User {
     // =============================
     //  Organisateur
     // =============================
-    private String nomOrganisation;
+
     private String nom_organisation;
     private String logo_organisation;
     private int cin;
-    private String description;
+
     @Column(columnDefinition = "TEXT")
     private String description;
 }
