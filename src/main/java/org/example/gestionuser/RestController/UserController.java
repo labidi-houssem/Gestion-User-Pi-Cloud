@@ -37,4 +37,9 @@ public class UserController {
     public void del(@PathVariable long id) {
         iu.removeUser(id);
     }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello from user Service";
+    }
 }
