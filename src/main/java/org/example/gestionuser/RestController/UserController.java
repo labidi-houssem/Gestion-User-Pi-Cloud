@@ -3,9 +3,8 @@ package org.example.gestionuser.RestController;
 import lombok.AllArgsConstructor;
 import org.example.gestionuser.Services.IUser;
 import org.example.gestionuser.entities.User;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -14,11 +13,12 @@ public class UserController {
     private final IUser iu;
 
     @GetMapping("/getAll")
-    public List<User> getAllUser() {
-        return iu.getAllUsers();
+    public ResponseEntity<?> getAllUser() {
+        return ResponseEntity.ok(iu.getAllUsers());
     }
 
     @GetMapping("/getUser/{id}")
+
     public User getUser(@PathVariable long id) {
         return iu.getUser(id);
     }

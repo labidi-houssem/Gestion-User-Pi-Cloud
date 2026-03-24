@@ -7,14 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginResponse {
-    private String token;
+public class SignupResponse {
     private Long userId;
-    private String username;
     private String email;
     private String role;
     private String statutCompte;
-    private boolean verificationRequired;
     private String message;
 }
-

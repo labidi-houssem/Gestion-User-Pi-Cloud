@@ -39,14 +39,10 @@ public class User {
     // =============================
     //  Transporteur
     // =============================
-    private String vehicule;
-    private double capacite;
-
-    private double latitudeActuelle;
-    private double longitudeActuelle;
-
-    private boolean disponible;
-    private double noteMoyenne;
+    private String typeVehicule;
+    private Double capaciteKg;
+    private String numeroPlaque;
+    
     // =============================
     //  Agent
     // =============================
