@@ -42,7 +42,7 @@ public class User {
     private String typeVehicule;
     private Double capaciteKg;
     private String numeroPlaque;
-    private String Region
+    private String Region;
     
     // =============================
     //  Agent
