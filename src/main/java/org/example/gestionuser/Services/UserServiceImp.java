@@ -2,6 +2,7 @@ package org.example.gestionuser.Services;
 
 import lombok.AllArgsConstructor;
 import org.example.gestionuser.Repositories.UserRepo;
+import org.example.gestionuser.entities.StatutCompte;
 import org.example.gestionuser.entities.User;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +38,18 @@ public class UserServiceImp implements IUser{
     @Override
     public User findByEmail(String email) {
         return ur.findByEmail(email).orElse(null);
+    }
+    @Override
+    public List<User> getUsersEnAttente() {
+        return ur.findByStatutCompte(StatutCompte.EN_ATTENTE);
+    }
+    @Override
+    public User updateStatut(Long id, StatutCompte statut) {
+        User user = ur.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        user.setStatutCompte(statut);
+        return ur.save(user);
     }
 }
 

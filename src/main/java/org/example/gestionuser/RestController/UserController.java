@@ -2,6 +2,7 @@ package org.example.gestionuser.RestController;
 
 import lombok.AllArgsConstructor;
 import org.example.gestionuser.Services.IUser;
+import org.example.gestionuser.entities.StatutCompte;
 import org.example.gestionuser.entities.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -41,5 +42,13 @@ public class UserController {
     @GetMapping("/hello")
     public String hello() {
         return "hello from user Service";
+    }
+    @GetMapping("/enAttente")
+    public ResponseEntity<?> getUsersEnAttente() {
+        return ResponseEntity.ok(iu.getUsersEnAttente());
+    }
+    @PutMapping("/updateStatut/{id}")
+    public User updateStatut(@PathVariable Long id, @RequestParam StatutCompte statut) {
+        return iu.updateStatut(id, statut);
     }
 }
