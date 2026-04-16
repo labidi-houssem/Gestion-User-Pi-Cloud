@@ -14,6 +14,9 @@ public class LoginResponse {
     private String email;
     private String role;
     private String statutCompte;
+    private String emailVerificationStatus;
+    private String profileValidationStatus;
+    private String nextStep;
     private boolean verificationRequired;
     private String message;
 }

@@ -12,5 +12,8 @@ public class SignupResponse {
     private String email;
     private String role;
     private String statutCompte;
+    private String emailVerificationStatus;
+    private String profileValidationStatus;
+    private String nextStep;
     private String message;
 }

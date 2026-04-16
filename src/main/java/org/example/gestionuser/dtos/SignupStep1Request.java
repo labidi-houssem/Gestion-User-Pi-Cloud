@@ -3,7 +3,6 @@ package org.example.gestionuser.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.gestionuser.entities.Role;
 
 @Data
 @NoArgsConstructor
@@ -13,5 +12,7 @@ public class SignupStep1Request {
     private String prenom;
     private String email;
     private String motDePasse;
-    private Role role;
+    private String role;
+    private String photo;
+    private String telephone;
 }

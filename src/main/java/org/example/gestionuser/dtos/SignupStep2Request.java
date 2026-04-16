@@ -13,6 +13,7 @@ public class SignupStep2Request {
     private String region;
 
     private String diplomeExpert;
+    private String documentUrl;
 
     private String vehicule;
     private Double capacite;
@@ -22,6 +23,9 @@ public class SignupStep2Request {
 
     private String agence;
     private String certificatTravail;
+
+    private String organizationLogo;
+    private String cin;
 
     private String adresseCabinet;
     private String presentationCarriere;

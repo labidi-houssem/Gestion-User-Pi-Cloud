@@ -16,6 +16,7 @@ public class User {
     private Long id;
     private String nom;
     private String prenom;
+    @Column(columnDefinition = "TEXT")
     private String photo;
     private String email;
     private String motDePasse;
@@ -23,6 +24,10 @@ public class User {
     private LocalDate dateCreation;
     @Enumerated(EnumType.STRING)
     private StatutCompte statutCompte;
+    @Enumerated(EnumType.STRING)
+    private EmailVerificationStatus emailVerificationStatus;
+    @Enumerated(EnumType.STRING)
+    private ProfileValidationStatus profileValidationStatus;
     private String motifRefus;
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -35,6 +40,7 @@ public class User {
     //  Expert
     // =============================
 
+    @Column(columnDefinition = "TEXT")
     private String diplomeExpert;
     // =============================
     //  Transporteur
@@ -49,6 +55,7 @@ public class User {
     // =============================
 
     private String agence;
+    @Column(columnDefinition = "TEXT")
     private String certificatTravail;
     // =============================
     //  veto
@@ -61,8 +68,10 @@ public class User {
     // =============================
 
     private String nom_organisation;
+    @Column(columnDefinition = "TEXT")
     private String logo_organisation;
-    private int cin;
+    @Column(columnDefinition = "TEXT")
+    private String cin;
 
     @Column(columnDefinition = "TEXT")
     private String description;
